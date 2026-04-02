@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7C319DCF2F7E656900E9798C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7C319DCE2F7E656900E9798C /* FirebaseAuth */; };
+		7C319DD12F7E656900E9798C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C319DD02F7E656900E9798C /* FirebaseCore */; };
+		7C319DD32F7E656900E9798C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7C319DD22F7E656900E9798C /* FirebaseFirestore */; };
+		7C319DD52F7E657B00E9798C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7C319DD42F7E657B00E9798C /* FirebaseDatabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		7C319D132F797FC600E9798C /* SimpleNotePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleNotePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C319DD12F7E656900E9798C /* FirebaseCore in Frameworks */,
+				7C319DCF2F7E656900E9798C /* FirebaseAuth in Frameworks */,
+				7C319DD52F7E657B00E9798C /* FirebaseDatabase in Frameworks */,
+				7C319DD32F7E656900E9798C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				7C319D152F797FC600E9798C /* SimpleNotePad */,
+				7C319DCD2F7E656900E9798C /* Frameworks */,
 				7C319D142F797FC600E9798C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +55,13 @@
 				7C319D132F797FC600E9798C /* SimpleNotePad.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7C319DCD2F7E656900E9798C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +84,10 @@
 			);
 			name = SimpleNotePad;
 			packageProductDependencies = (
+				7C319DCE2F7E656900E9798C /* FirebaseAuth */,
+				7C319DD02F7E656900E9798C /* FirebaseCore */,
+				7C319DD22F7E656900E9798C /* FirebaseFirestore */,
+				7C319DD42F7E657B00E9798C /* FirebaseDatabase */,
 			);
 			productName = SimpleNotePad;
 			productReference = 7C319D132F797FC600E9798C /* SimpleNotePad.app */;
@@ -94,6 +117,9 @@
 			);
 			mainGroup = 7C319D0A2F797FC600E9798C;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7C319D142F797FC600E9798C /* Products */;
 			projectDirPath = "";
@@ -259,8 +285,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -269,12 +295,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.SimpleNotePad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -291,8 +321,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,12 +331,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.study.SimpleNotePad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -332,6 +366,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C319DCE2F7E656900E9798C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7C319DD02F7E656900E9798C /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7C319DD22F7E656900E9798C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7C319DD42F7E657B00E9798C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C319DCA2F7E64D300E9798C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C319D0B2F797FC600E9798C /* Project object */;
 }
