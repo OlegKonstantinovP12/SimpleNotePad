@@ -7,6 +7,7 @@ import SwiftUI
 
 struct AddNoteView: View {
     @StateObject var viewModel = Assembly.createAddNoteViewModel()
+    @Environment(\.dismiss) var dissmiss
     let mode: ModeType
     @Binding var path: NavigationPath
     init(mode: ModeType, path: Binding<NavigationPath>) {
@@ -35,10 +36,12 @@ struct AddNoteView: View {
                 case .create:
                     Task {
                         await viewModel.addNote()
+                        dissmiss()
                     }
                 case .edit(let note):
                     Task {
                         await viewModel.updateNote(id: note.id)
+                        dissmiss()
                     }
                 }
 
